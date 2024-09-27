@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: url(./images/backgound.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#app {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(65, 62, 62, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(235, 112, 112, 0.5);
+}
+
+.character {
+    width: 25%;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(3, 3, 3, 0.3);
+    color: rgb(255, 253, 253);
+    text-align: center;
+}
+
+.sprite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;  
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: radius 15px;
+    overflow: hidden;
+}
+
+.sprite img {
+    max-width: 100%;
+    max-height: 150%;  
+}
+
+.life-bar {
+    height: 35px;  
+    width: 100%;
+    background-color: #ff0000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  
+    gap: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;  
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgb(51, 49, 49);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #810404;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(128, 116, 116, 0.7);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: rgb(252, 249, 249);
+    font-size: 2.5rem;
+    user-select: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #app {
+        flex-direction: column;  
+    }
+
+    .character {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .actions {
+        grid-template-columns: repeat(1, 1fr);  
+    }
+}
